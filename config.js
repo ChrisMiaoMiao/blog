@@ -2,11 +2,11 @@
 
 module.exports = {
   url: "https://developer-diary.netlify.com",
-  title: "Developer Diary",
+  title: "淼淼真人的道场",
   tagline: "Autodidact developer and sometimes hoop-jumper",
-  copyright: "© 2019 willjw3, All rights reserved",
+  copyright: "© 2019 Chris, All rights reserved",
   author: {
-    name: "WILL JAY",
+    name: "Chris MiaoMiao",
     bio: "Self-taught web developer and whisky aficionado",
     contacts: {
       linkedin: "https://www.linkedin.com/in/will-ward-65234a170/",
