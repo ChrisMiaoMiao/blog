@@ -54,12 +54,6 @@ const Tag = ({ pageContext, data }) => {
                                 <small className="d-block text-info">Posted on {post.node.frontmatter.date}
                                 </small>
                                 <p className="mt-3 d-inline">{post.node.excerpt}</p>
-                                <Link
-                                    to={post.node.fields.slug}
-                                    className="text-primary"
-                                >
-                                    <small className="d-inline-block ml-3"> Read full post</small>
-                                </Link>
                                 <div className="d-block">
                                     {getTechTags(tags)}
                                 </div>

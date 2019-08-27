@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./blog-post.css"
 
-import Sidebar from "../components/sidebar/Sidebar"
 import TechTag from "../components/tags/TechTag"
 import CustomShareBlock from "../components/CustomShareBlock"
 
@@ -31,11 +30,7 @@ const BlogPost = (props) => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
-      <div className="post-page-main">
-        <div className="sidebar px-4 py-2">
-          <Sidebar />
-        </div>
-
+      <div className="post-main-wrap">
         <div className="post-main">
           <SEO title={post.frontmatter.title} />
           <div className="mt-3">
@@ -45,7 +40,7 @@ const BlogPost = (props) => {
             </div>
             <br />
             <small><i>Published on </i> {post.frontmatter.date}</small>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
             <CustomShareBlock title={post.frontmatter.title} siteName={siteName} url={url} />
           </div>
         </div>

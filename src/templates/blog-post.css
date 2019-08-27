@@ -1,19 +1,18 @@
 .post-page-main {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
-
-.heading {
-  font-family: "Raleway";
+.post-main-wrap {
+  max-width: 728px;
+  margin: 0 auto;
 }
-
 .sidebar {
-    width: 90%;
+  width: 90%;
 }
 
-
-
-
+.post-content {
+  margin-top: 20px;
+}
 @media only screen and (max-width: 850px) {
  .sidebar{display: none;}
  .post-page-main{

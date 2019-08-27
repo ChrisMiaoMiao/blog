@@ -5,5 +5,8 @@
  */
 
 // You can delete this file if you're not using it
+import React from 'react'
+import {ThemeProvider} from './src/context/ThemeContext'
 
-require("./src/templates/codeblock.css")
+export const wrapRootElement = ({ element }) => <ThemeProvider>{element}</ThemeProvider>
+// require("./src/templates/codeblock.css")
