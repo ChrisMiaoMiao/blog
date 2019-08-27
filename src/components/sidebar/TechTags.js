@@ -41,7 +41,7 @@ const TechTags = (props) => {
 
     return (
         <>
-            <h4>Tech Topics</h4>
+            <h4>分类主题: </h4>
             <div className="d-block">
                 {getTechTags(tags)}
             </div>

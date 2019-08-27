@@ -8,5 +8,6 @@
 import React from 'react'
 import {ThemeProvider} from './src/context/ThemeContext'
 
-export const wrapRootElement = ({ element }) => <ThemeProvider>{element}</ThemeProvider>
 // require("./src/templates/codeblock.css")
+
+export const wrapRootElement = ({ element }) => <ThemeProvider>{element}</ThemeProvider>

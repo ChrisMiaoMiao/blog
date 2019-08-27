@@ -4,7 +4,8 @@ import {
     FaGithubSquare,
     FaStackOverflow,
     FaFreeCodeCamp,
-    FaTwitterSquare
+    FaTwitterSquare,
+    FaMoon,
 } from "react-icons/fa"
 
 import "../layout.css"
@@ -12,7 +13,12 @@ import "../layout.css"
 const MobileSocialLinks = ({ contacts }) => {
     return (
         <div className="bottom-bar py-1">
-            <a className=" text-primary"
+            <a className=" text-primary">
+                <span title="Linked In">
+                    <FaMoon size={26} style={{ color: "#FCC21B" }} />
+                </span>
+            </a>
+            {/* <a className=" text-primary"
                 href={contacts.linkedin}>
                 <span title="Linked In">
                     <FaLinkedin size={26} style={{ color: "primary" }} />
@@ -41,7 +47,7 @@ const MobileSocialLinks = ({ contacts }) => {
                 <span title="Twitter">
                     <FaTwitterSquare size={26} style={{ color: "info" }} />
                 </span>
-            </a>
+            </a> */}
         </div>
     )
 }

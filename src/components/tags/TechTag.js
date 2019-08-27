@@ -1,6 +1,7 @@
 import React from "react"
 import * as FontAwesome from "react-icons/fa"
 import * as Devicons from "react-icons/di"
+import * as GIIcons from "react-icons/gi"
 
 import "./tags.css"
 import { Link } from "gatsby";
@@ -8,8 +9,14 @@ import { Link } from "gatsby";
 const TechTag = (props) => {
     const { tag, tech, name, size, color } = props
     const str = name;
-    const icon = /^Fa/.test(str) ? React.createElement(FontAwesome[name]) : React.createElement(Devicons[name]);
-
+    let icon;
+    if (/^Fa/.test(str)) {
+        icon = React.createElement(FontAwesome[name])
+    } else if (/^Gi/.test(str)) {
+        icon = React.createElement(GIIcons[name])
+    } else {
+        icon = React.createElement(Devicons[name])
+    }
     return (
         <div className="d-inline-block p-1">
             <Link to={`/tags/${tag}/`}>

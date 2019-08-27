@@ -6,10 +6,14 @@
   "author": "willjw3 <https://github.com/willjw3>",
   "dependencies": {
     "@emotion/core": "^10.0.10",
+    "@mdx-js/mdx": "^1.3.2",
+    "@mdx-js/react": "^1.3.2",
+    "@mdx-js/tag": "^0.20.3",
     "bootstrap": "^4.3.1",
     "emotion": "^10.0.9",
     "gatsby": "^2.7.1",
     "gatsby-image": "^2.1.1",
+    "gatsby-mdx": "^1.0.0",
     "gatsby-plugin-emotion": "^4.0.7",
     "gatsby-plugin-google-fonts": "^1.0.0",
     "gatsby-plugin-manifest": "^2.1.1",
@@ -17,7 +21,6 @@
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.1.12",
     "gatsby-plugin-sharp": "^2.1.1",
-    "gatsby-plugin-styled-components": "^3.1.3",
     "gatsby-remark-prismjs": "^3.2.9",
     "gatsby-remark-responsive-iframe": "^2.1.1",
     "gatsby-source-filesystem": "^2.0.37",
@@ -31,11 +34,15 @@
     "react-bootstrap": "^1.0.0-beta.8",
     "react-custom-share": "^0.4.8",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
-    "react-icons": "^3.7.0"
+    "react-icons": "^3.7.0",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "prettier": "^1.17.1"
+    "babel-plugin-styled-components": "^1.10.6",
+    "gatsby-plugin-styled-components": "^3.1.3",
+    "gatsby-remark-code-buttons": "^2.0.1",
+    "prettier": "^1.17.1",
+    "react-helmet": "^5.2.1"
   },
   "keywords": [
     "gatsby"

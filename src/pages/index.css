@@ -1,19 +1,75 @@
-
-p, .title {
-  font-family: "Raleway";
+/* @font-face {
+  font-family: 'FZXiJinLJW';
+  src: url('../../static/fonts/lato/FZXiJinLJW.33937684.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'FZBZT';
+  src: url('../../static/fonts/lato/FZBENMYYTJW.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'FZQianWTJW';
+  src: url('../../static/fonts/lato/FZQianWTJW_Da.ttf') format('truetype');
+}  */
+/* html, body {
+  font-family: "FZBZT", "Raleway";
+}
+.head-logo {
+  font-family: "FZQianWTJW";
+}
+p, .title {
+  font-family: "FZBZT", "Raleway";
+} */
 
 .index-main {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 } 
 
 .sidebar {
-    width: 90%;
+  width: 90%;
 }
 
+.post-list-main h2.title {
+  position: relative;
+  display: inline-block;
+}
 
+.post-list-main h2.title::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fc2f70;
+  transform-origin: center;
+  transform: translate(-50%, 0) scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
 
+.post-list-main h2.title:hover::before {
+  transform: translate(-50%, 0) scaleX(1);
+}
+.post-list-main h2.title {
+  position: relative;
+}
+
+.post-list-main h2.title::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fc2f70;
+  transform-origin: center;
+  transform: translate(-50%, 0) scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+h2.heading:hover::before {
+  transform: translate(-50%, 0) scaleX(1);
+}
 @media only screen and (max-width: 850px) {
   .sidebar{display: none;}
   .index-main{
