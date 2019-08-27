@@ -1,17 +1,14 @@
 ---
-title: 'Welcome To My Web Developer Blog'
+title: '深入理解Source Map'
 tags: ["react", "vscode", "git", "css", "python", "ruby", "java", "angular", "html", "php", "mongodb", "mysql", "sports", "mindfulness", "write", "communication", "read"]
 published: true
-date: '2018-08-20'
+date: '2019-05-20'
 ---
 
-This blog template is designed for web developers. Whether you're a professional web developer or are just getting started in the world of web development, this Gatsby starter is ready to go, right out the of box. Its minimalist design makes it easy to tailor to your needs. But, you'll definitely want to make use of the tech tags and developer social media links, and maybe even make some of your own.
-
-# 一 Source Map是什么？
 Source Map,顾名思义，是保存源代码映射关系的文件，相信用过webpack的开发者对它应该不会陌生。在项目开发完进行打包后，在打包的文件夹里通常除了js，css,图片字体等资源文件外，大家一定还见过xxx.js.map的文件。这种带map后缀的文件就是Source Map文件——它保存了源代码和转换之后代码（通常经过压缩混淆和其他转换）的关系。
 下图展示了部分打包之后生成的Source Map文件:
 
-![5a32f6132ce10e09e0b72268e07964e4.png](evernotecid://91BD2279-B375-483E-9AB0-26339B01DF7E/appyinxiangcom/15997235/ENResource/p2624)
+![WX20190614-151320.png](https://user-gold-cdn.xitu.io/2019/6/17/16b658ca2d25956d?w=285&h=335&f=png&s=22570)
 
 
 下面是一个典型的Source Map文件的格式：
@@ -45,11 +42,11 @@ Source Map,顾名思义，是保存源代码映射关系的文件，相信用过
 
 经过上述转换过程的代码，往往都会变得面目全非，就像下面这样:
 
-![6dd70b5035dd93592741e98758b05103.png](evernotecid://91BD2279-B375-483E-9AB0-26339B01DF7E/appyinxiangcom/15997235/ENResource/p2629)
+![WX20190614-154341.png](https://user-gold-cdn.xitu.io/2019/6/17/16b658ca2b400793?w=1915&h=199&f=png&s=158804)
 这样虽然对带宽很友好，但是调试起来就不是那么轻松了。我们在代码出错的时候，肯定最希望能定位其在源码中的位置。
 比如下面这两个错误提示：
-![9449460c996e566d524a7a2d210dc0f3.png](evernotecid://91BD2279-B375-483E-9AB0-26339B01DF7E/appyinxiangcom/15997235/ENResource/p2631)
-![d6ef9eae61f8894056b99c28815e1b29.png](evernotecid://91BD2279-B375-483E-9AB0-26339B01DF7E/appyinxiangcom/15997235/ENResource/p2632)
+![WX20190614-160302.png](https://user-gold-cdn.xitu.io/2019/6/17/16b658c9d398f5c7?w=471&h=148&f=png&s=37022)
+![WX20190614-160413.png](https://user-gold-cdn.xitu.io/2019/6/17/16b658c9d2b1238a?w=578&h=148&f=png&s=48402)
 对于大多数开发者来说，希望看到的应该是第二种提示方式，而这就是Source Map能够输出的能力。
 
 # 三 Source Map是怎么实现映射的？
@@ -119,7 +116,7 @@ names: ['I', 'am', 'Chris']
 ```
 变成了
 ```js
-1|0|1|6|0
+1|0|1|6|2
 ```
 最终的映射信息变成了:
 ```js
@@ -168,7 +165,7 @@ mappings: "1(输出列的绝对位置)|0|1|6(输入列的绝对位置)|2,6(输�
 
 VLQ的编码形式很多，这篇文章中要说明的是下面这种：
 
-![2ec86fc133f3d320b73f5077e3f9d30a.png](evernotecid://91BD2279-B375-483E-9AB0-26339B01DF7E/appyinxiangcom/15997235/ENResource/p2676)
+![WX20190615-165403.png](https://user-gold-cdn.xitu.io/2019/6/17/16b658c9d42e7bd4?w=374&h=55&f=png&s=4803)
 
 * 一个组包含6个二进制位。
 * 在每组中的第一位C用来标识其后面是否会跟着另一个VLQ字节组,值为0表示其是最后一个VLQ字节组，值为1表示后面还跟着另一个VLQ字节组。
@@ -220,7 +217,7 @@ VLQ的编码形式很多，这篇文章中要说明的是下面这种：
 ```
 
 通过Base64进行转换之后：
-![b4ad44a7ee274b4b19d6803fd308681c.png](evernotecid://91BD2279-B375-483E-9AB0-26339B01DF7E/appyinxiangcom/15997235/ENResource/p2678)
+![bg2013012202 (1).png](https://user-gold-cdn.xitu.io/2019/6/17/16b658ca2f5f0e2d?w=381&h=407&f=png&s=13872)
 最终得到下列结果:
 ```
 YGwcO

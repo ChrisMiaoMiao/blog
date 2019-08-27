@@ -65,11 +65,14 @@ export default class Layout extends Component {
               <main className="p-4">{children}</main>
               <footer className="text-center">
                 <hr/>
-                <p className="d-inline">© {new Date().getFullYear()} <a className="text-info" href="https://xiongzixiao.github.io/">淼淼真人</a>, All Rights Reserved.</p>
-                <p className="mt-5 text-muted d-inline"><i> Built with
+                <div>
+                  <p className="d-inline">© {new Date().getFullYear()} <a className="text-info" href="https://xiongzixiao.github.io/">淼淼真人</a>, All Rights Reserved.</p>
+                  <p className="mt-5 text-muted d-inline"><i> Built with
                             {` `}
-                  <a className="text-info" href="https://www.gatsbyjs.org">Gatsby</a></i>
-                </p>
+                    <a className="text-info" href="https://www.gatsbyjs.org">Gatsby</a></i>
+                  </p>
+                </div>
+                {/* <a href="http://www.beian.miit.gov.cn/" className="beian-href">浙ICP备19034990号</a> */}
               </footer>
             </div>
           </>
