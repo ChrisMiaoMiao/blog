@@ -72,7 +72,7 @@ export default class Layout extends Component {
                     <a className="text-info" href="https://www.gatsbyjs.org">Gatsby</a></i>
                   </p>
                 </div>
-                {/* <a href="http://www.beian.miit.gov.cn/" className="beian-href">浙ICP备19034990号</a> */}
+                <a href="http://www.beian.miit.gov.cn/" className="beian-href">浙ICP备19034990号</a>
               </footer>
             </div>
           </>
