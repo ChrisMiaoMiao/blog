@@ -7,8 +7,8 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
-  color: black;
-  background: #fff;
+  color: #000;
+  background: #292525;
 }
 
 .head-elements {
@@ -40,9 +40,8 @@
   font-size: 2rem;
 }
 .head-logo-link {
-  color: #000;
+  color: #fff;
 }
-
 small {
     font-family: "Raleway";
 }

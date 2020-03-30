@@ -47,7 +47,7 @@ export default class Layout extends Component {
               class: `theme ${dark && !notFound ? 'dark' : '' || notFound ? 'not-found' : ''}`,
             }}
             >
-              <meta name="description" content='123' />
+              <meta name="description" content='淼淼的博客' />
               <link rel="shortcut icon" type="image/png" />        
             </Helmet>
             <Header

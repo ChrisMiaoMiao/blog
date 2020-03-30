@@ -2,7 +2,7 @@
 
 module.exports = {
   url: "https://developer-diary.netlify.com",
-  title: "淼淼真人的道场",
+  title: "淼淼的博客",
   tagline: "Autodidact developer and sometimes hoop-jumper",
   copyright: "© 2019 Chris, All rights reserved",
   author: {
