@@ -1,0 +1,30 @@
+.content-card-wrap {
+  /* display: flex; */
+  background: #fff;
+  max-width: 800px;
+  width: 100%;
+  user-select: none;
+}
+.content-card-item {
+  display: flex;
+}
+.img-box {
+  width: 50%;
+  padding-top: 25%;
+  overflow: hidden;
+  position: relative;
+  transition: all .2s ease-out;
+  background: linear-gradient(180deg,transparent 50%,rgba(0,0,0,.2));
+}
+.card-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  min-width: 100%;
+  width: auto;
+  height: 100%;
+  -webkit-transition: width .2s ease-out,height .2s ease-out;
+  transition: width .2s ease-out,height .2s ease-out;
+}

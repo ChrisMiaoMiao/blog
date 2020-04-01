@@ -1,35 +1,20 @@
-/* @font-face {
-  font-family: 'FZXiJinLJW';
-  src: url('../../static/fonts/lato/FZXiJinLJW.33937684.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'FZBZT';
-  src: url('../../static/fonts/lato/FZBENMYYTJW.ttf') format('truetype');
-}
-@font-face{
-  font-family: 'FZQianWTJW';
-  src: url('../../static/fonts/lato/FZQianWTJW_Da.ttf') format('truetype');
-}  */
-/* html, body {
-  font-family: "FZBZT", "Raleway";
-}
-.head-logo {
-  font-family: "FZQianWTJW";
-}
-p, .title {
-  font-family: "FZBZT", "Raleway";
-} */
 
 .index-main {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  background: red;
 } 
-
-.sidebar {
-  width: 90%;
+.container_content {
+  flex: 1;
+  margin-right: 20px;
+  background: green;
 }
-
-.post-list-main h2.title {
+.container_nav {
+  width: 252px;
+}
+/* .post-list-main h2.title {
   position: relative;
   display: inline-block;
 }
@@ -77,4 +62,4 @@ h2.heading:hover::before {
     flex-direction: row;
     justify-content: space-around;
   }
-}
+} */

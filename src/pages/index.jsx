@@ -1,38 +1,48 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import "bootstrap/dist/css/bootstrap.css"
-import "./index.css"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Sidebar from "../components/sidebar/Sidebar"
-import TechTag from "../components/tags/TechTag"
-const IndexPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges
-  const labels = data.site.siteMetadata.labels
-  const currentPage = 1
-  const nextPage = (currentPage + 1).toString()
+/* eslint-disable implicit-arrow-linebreak */
+import React from 'react'
+import { graphql } from 'gatsby'
+// import { Link, graphql } from 'gatsby'
+import 'bootstrap/dist/css/bootstrap.css'
+import './index.css'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+// import Sidebar from '../components/sidebar/Sidebar'
+import TechTag from '../components/tags/TechTag'
+import ContentCard from '../components/contentCard/ContentCard'
 
-  const getTechTags = (tags) => {
-    const techTags = []
-    tags.forEach((tag, i) => {
-      labels.forEach((label) => {
-        if (tag === label.tag) {
-          techTags.push(<TechTag key={i} tag={label.tag} tech={label.tech} name={label.name} size={label.size} color={label.color} />)
-        }
-      })
-    })
-    return techTags
-  }
+const IndexPage = ({ data }) =>
+// const posts = data.allMarkdownRemark.edges
+// const { labels } = data.site.siteMetadata
+// const currentPage = 1
+// const nextPage = (currentPage + 1).toString()
+
+// const getTechTags = (tags) => {
+//   const techTags = []
+//   tags.forEach((tag, i) => {
+//     labels.forEach((label) => {
+//       if (tag === label.tag) {
+// eslint-disable-next-line max-len
+//         techTags.push(<TechTag key={i} tag={label.tag} tech={label.tech} name={label.name} size={label.size} color={label.color} />)
+//       }
+//     })
+//   })
+//   return techTags
+// }
 
 
-  return (
+  (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `javascript`, `react`, `web development`, `blog`, `graphql`]} />
+      <SEO title="Home" keywords={['gatsby', 'javascript', 'react', 'web development', 'blog', 'graphql']} />
       <div className="index-main">
-        <div className="sidebar px-4 py-2">
-          <Sidebar />
+        <div className="container_content">
+          {/* <Sidebar /> */}
+          <ContentCard />
         </div>
-        <div className="post-list-main">
+        <div className="container_nav" />
+        {/* <div className="sidebar px-4 py-2">
+          <Sidebar />
+        </div> */}
+        {/* <div className="post-list-main">
           {posts.map((post) => {
             const tags = post.node.frontmatter.tags
             return (
@@ -57,11 +67,11 @@ const IndexPage = ({ data }) => {
               <span className="text-dark">Next Page →</span>
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </Layout>
   )
-}
+
 
 export const pageQuery = graphql`
          query IndexQuery {
@@ -104,4 +114,3 @@ export const pageQuery = graphql`
        `
 
 export default IndexPage
-
