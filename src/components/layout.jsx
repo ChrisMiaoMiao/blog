@@ -64,7 +64,7 @@ export default class Layout extends Component {
                 paddingTop: 0,
               }}
             >
-              <main className="p-4">{children}</main>
+              <main>{children}</main>
               <footer className="text-center">
                 <hr />
                 <div>

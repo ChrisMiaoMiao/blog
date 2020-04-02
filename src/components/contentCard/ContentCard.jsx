@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 // import { Link } from 'gatsby'
 // import PropTypes from 'prop-types'
 import './contentCard.css'
+import { FaCheckCircle, FaCircle } from 'react-icons/fa'
+
 
 export default class ContentCard extends Component {
   render() {
@@ -14,11 +16,28 @@ export default class ContentCard extends Component {
             </a>
           </div>
           <div className="card-content">
-            <a href="/post/59703" target="_blank" className="pc_card">
-              <div className="title text_ellipsis2">
+            <a href="/post/59703" className="pc_card">
+              <div className="title">
                 如何做课堂笔记更高效？我的 iPad + Notability 使用经验分享
               </div>
             </a>
+            <div className="card-bottom pc-card">
+              <div className="left">
+                <img src="https://cdn.sspai.com/2020/03/27/4ca175e07e34ef70999d7c068790dbde.jpg?imageMogr2/quality/95/thumbnail/!48x48r/gravity/Center/crop/48x48/interlace/1" alt="" className="header" />
+                <span className="name">Chris MiaoMiao</span>
+                <span>1天前</span>
+              </div>
+              <div className="right">
+                <div className="pic-box">
+                  <FaCheckCircle size={12} style={{ color: 'success' }} />
+                  <span className="name">177</span>
+                </div>
+                <div className="pic-box">
+                  <FaCheckCircle size={12} style={{ color: 'success' }} />
+                  <span className="name">65</span>
+                </div>
+              </div>
+            </div>
             {/* <div data-v-150e9f12="" class="card_bottom pc_card">
               <div data-v-150e9f12="" class="left">
                 <div data-v-150e9f12="" class="pic_box">

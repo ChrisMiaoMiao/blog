@@ -4,38 +4,61 @@ import { graphql } from 'gatsby'
 // import { Link, graphql } from 'gatsby'
 import 'bootstrap/dist/css/bootstrap.css'
 import './index.css'
+import Swiper from 'react-id-swiper';
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 // import Sidebar from '../components/sidebar/Sidebar'
 import TechTag from '../components/tags/TechTag'
 import ContentCard from '../components/contentCard/ContentCard'
 
-const IndexPage = ({ data }) =>
-// const posts = data.allMarkdownRemark.edges
-// const { labels } = data.site.siteMetadata
-// const currentPage = 1
-// const nextPage = (currentPage + 1).toString()
 
-// const getTechTags = (tags) => {
-//   const techTags = []
-//   tags.forEach((tag, i) => {
-//     labels.forEach((label) => {
-//       if (tag === label.tag) {
-// eslint-disable-next-line max-len
-//         techTags.push(<TechTag key={i} tag={label.tag} tech={label.tech} name={label.name} size={label.size} color={label.color} />)
-//       }
-//     })
-//   })
-//   return techTags
-// }
+const IndexPage = ({ data }) => {
+  // const posts = data.allMarkdownRemark.edges
+  // const { labels } = data.site.siteMetadata
+  // const currentPage = 1
+  // const nextPage = (currentPage + 1).toString()
 
+  // const getTechTags = (tags) => {
+  //   const techTags = []
+  //   tags.forEach((tag, i) => {
+  //     labels.forEach((label) => {
+  //       if (tag === label.tag) {
+  // eslint-disable-next-line max-len
+  //         techTags.push(<TechTag key={i} tag={label.tag} tech={label.tech} name={label.name} size={label.size} color={label.color} />)
+  //       }
+  //     })
+  //   })
+  //   return techTags
+  // }
 
-  (
+  const params = {
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    spaceBetween: 30,
+  }
+  return (
     <Layout>
       <SEO title="Home" keywords={['gatsby', 'javascript', 'react', 'web development', 'blog', 'graphql']} />
-      <div className="index-main">
+      <div className="banner">
+        <Swiper {...params}>
+          <div>Slide 1</div>
+          <div>Slide 2</div>
+          <div>Slide 3</div>
+          <div>Slide 4</div>
+          <div>Slide 5</div>
+        </Swiper>
+      </div>
+      <div className="index-main p-4">
         <div className="container_content">
           {/* <Sidebar /> */}
+          <ContentCard />
           <ContentCard />
         </div>
         <div className="container_nav" />
@@ -71,8 +94,7 @@ const IndexPage = ({ data }) =>
       </div>
     </Layout>
   )
-
-
+}
 export const pageQuery = graphql`
          query IndexQuery {
            site {

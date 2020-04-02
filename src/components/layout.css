@@ -1,7 +1,11 @@
 html {
-  /* font-family: sans-serif; */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: 14px;
+  font-family: -apple-system,BlinkMacSystemFont,PingFang SC,Hiragino Sans GB,Microsoft YaHei,"\5FAE\8F6F\96C5\9ED1",helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  color: #292525;
 }
 body {
   margin: 0;
@@ -185,7 +189,6 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em 'FZBZT', 'Courier New', monospace;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -200,7 +203,6 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'FZBZT', 'Courier New', monospace;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
