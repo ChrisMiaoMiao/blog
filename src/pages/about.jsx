@@ -2,7 +2,7 @@ import React from 'react'
 import { FaCheckCircle, FaCircle } from 'react-icons/fa'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import './index.css'
+import './index.scss'
 
 import Sidebar from '../components/sidebar/Sidebar'
 import TechTag from '../components/tags/TechTag'

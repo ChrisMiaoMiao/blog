@@ -4,16 +4,24 @@
   max-width: 1120px;
   width: 100%;
   margin: 0 auto;
-  background: red;
 } 
 .container_content {
   flex: 1;
   margin-right: 20px;
-  background: green;
 }
 .container_nav {
   width: 252px;
 }
+
+.choice_wrap {
+  .choice_title {
+    background: #fff;
+    padding: 15px;
+  }
+}
+/* .banner {
+  height: 300px;
+} */
 /* .post-list-main h2.title {
   position: relative;
   display: inline-block;

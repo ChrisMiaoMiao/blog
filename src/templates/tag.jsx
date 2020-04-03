@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import 'bootstrap/dist/css/bootstrap.css'
-import '../pages/index.css'
+import '../pages/index.scss'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'

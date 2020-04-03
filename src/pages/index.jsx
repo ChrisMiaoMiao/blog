@@ -1,16 +1,18 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable implicit-arrow-linebreak */
 import React from 'react'
 import { graphql } from 'gatsby'
 // import { Link, graphql } from 'gatsby'
 import 'bootstrap/dist/css/bootstrap.css'
-import './index.css'
+import './index.scss'
 import Swiper from 'react-id-swiper';
+import 'swiper/css/swiper.css'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 // import Sidebar from '../components/sidebar/Sidebar'
 import TechTag from '../components/tags/TechTag'
 import ContentCard from '../components/contentCard/ContentCard'
-
+import TagCard from '../components/tagCard/index'
 
 const IndexPage = ({ data }) => {
   // const posts = data.allMarkdownRemark.edges
@@ -32,6 +34,12 @@ const IndexPage = ({ data }) => {
   // }
 
   const params = {
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    //   renderBullet: (index, className) => `<span className="${className}">${index + 1}</span>`,
+    // },
+    loop: true,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
@@ -48,20 +56,64 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" keywords={['gatsby', 'javascript', 'react', 'web development', 'blog', 'graphql']} />
       <div className="banner">
         <Swiper {...params}>
-          <div>Slide 1</div>
-          <div>Slide 2</div>
-          <div>Slide 3</div>
-          <div>Slide 4</div>
-          <div>Slide 5</div>
+          <div>
+            <a>
+              <img src="https://cdn.sspai.com/article/90fd7972-602c-090f-c7cc-6141b22a4d9d.jpg?imageMogr2/quality/95/thumbnail/!2880x620r/gravity/Center/crop/2880x620/interlace/1" alt="" className="banner-item" />
+            </a>
+          </div>
+          <div>
+            <a>
+              <img src="https://cdn.sspai.com/article/ecd9cfba-a6fd-9278-3250-b9003651cbf8.jpg?imageMogr2/quality/95/thumbnail/!2880x620r/gravity/Center/crop/2880x620/interlace/1" alt="" className="banner-item" />
+            </a>
+          </div>
         </Swiper>
       </div>
       <div className="index-main p-4">
         <div className="container_content">
-          {/* <Sidebar /> */}
+          <ContentCard />
+          <ContentCard />
+          <ContentCard />
+          <ContentCard />
           <ContentCard />
           <ContentCard />
         </div>
-        <div className="container_nav" />
+        <div className="container_nav">
+          <div style={{
+            marginBottom: 10,
+          }}
+          >
+            <TagCard />
+          </div>
+          <div style={{
+            marginBottom: 10,
+          }}
+          >
+            <TagCard />
+          </div>
+          <div style={{
+            marginBottom: 10,
+          }}
+          >
+            <TagCard />
+          </div>
+          <div className="choice_wrap">
+            <div className="choice_title">
+              <img src="" alt="" />
+              <span>精选文章</span>
+            </div>
+            <div className="choice_list">
+              <div className="choice_item">
+                记账神器 Beancount 教程
+              </div>
+              <div className="choice_item">
+                记账神器 Beancount 教程
+              </div>
+              <div className="choice_item">
+                记账神器 Beancount 教程
+              </div>
+            </div>
+          </div>
+        </div>
         {/* <div className="sidebar px-4 py-2">
           <Sidebar />
         </div> */}

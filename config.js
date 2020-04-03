@@ -1,7 +1,7 @@
 
 module.exports = {
   url: 'https://developer-diary.netlify.com',
-  title: '暂位logo',
+  title: '占位logo',
   tagline: 'Autodidact developer and sometimes hoop-jumper',
   copyright: '© 2019 Chris, All rights reserved',
   author: {
@@ -9,7 +9,6 @@ module.exports = {
     bio: 'Self-taught web developer and whisky aficionado',
     contacts: {
       linkedin: 'https://www.linkedin.com/in/will-ward-65234a170/',
-      // github: "https://github.com/willjw3",
       stackoverflow:
         'https://stackoverflow.com/users/10262432/will-ward?tab=profile',
       freecodecamp: 'https://www.freecodecamp.org/willjw3',

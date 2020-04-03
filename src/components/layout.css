@@ -617,3 +617,6 @@ pre tt:after {
     font-size: 100%;
   }
 }
+.main-wrap {
+  background: #f4f4f4;
+}

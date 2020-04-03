@@ -12,7 +12,11 @@ export default class ContentCard extends Component {
         <div className="content-card-item">
           <div className="img-box">
             <a href="https://www.baidu.com">
-              <img alt="" src="https://cdn.sspai.com/article/208a6a92-adf1-ba1d-5d06-2ec378d94193.jpg?imageMogr2/quality/95/thumbnail/!800x400r/gravity/Center/crop/800x400/interlace/1" className="card-image" />
+              <img
+                alt=""
+                src="https://cdn.sspai.com/2020/03/13/4127b6bdb17778fd8037f7496b91a410.jpg?imageMogr2/quality/95/thumbnail/!800x400r/gravity/Center/crop/800x400/interlace/1"
+                className="card-image"
+              />
             </a>
           </div>
           <div className="card-content">

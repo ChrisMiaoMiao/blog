@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
@@ -16,10 +17,6 @@ const Header = ({
   >
     <div
       className="head-elements"
-      style={{
-        margin: '0',
-        padding: '.75rem',
-      }}
     >
       <h1 className="head-logo ml-4" style={{ margin: 0 }}>
         <Link
@@ -44,14 +41,14 @@ Header.propTypes = {
   siteTitle: PropTypes.string,
   // tagline: PropTypes.string,
   author: PropTypes.string,
-  contacts: PropTypes.string,
+  contacts: PropTypes.object,
 }
 
 Header.defaultProps = {
   siteTitle: '',
   // tagline: '',
   author: '',
-  contacts: '',
+  contacts: {},
 }
 
 export default Header

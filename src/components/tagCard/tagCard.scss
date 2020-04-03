@@ -1,0 +1,32 @@
+.tag-card-wrap {
+  position: relative;
+  width: 252px;
+  height: 140px;
+  cursor: pointer;
+  display: flex;
+  background: red;
+}
+.tag-card-icon {
+  width: 100%;
+  height: 100%;
+}
+.tag-card-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);  
+  z-index: 50;
+}
+.tag-card-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 100%;
+  transform: translateY(-50%) translateX(-50%);
+  color: #fff;
+  font-weight: 800;
+  font-size: 34px;
+  z-index: 90;
+  text-align: center;
+}
