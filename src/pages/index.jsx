@@ -15,7 +15,8 @@ import ContentCard from '../components/contentCard/ContentCard'
 import TagCard from '../components/tagCard/index'
 
 const IndexPage = ({ data }) => {
-  // const posts = data.allMarkdownRemark.edges
+  const posts = data.allMarkdownRemark.edges
+  console.log(posts, 1111)
   // const { labels } = data.site.siteMetadata
   // const currentPage = 1
   // const nextPage = (currentPage + 1).toString()
@@ -34,27 +35,22 @@ const IndexPage = ({ data }) => {
   // }
 
   const params = {
-    // pagination: {
-    //   el: '.swiper-pagination',
-    //   clickable: true,
-    //   renderBullet: (index, className) => `<span className="${className}">${index + 1}</span>`,
-    // },
     loop: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination.customized-swiper-pagination',
       type: 'bullets',
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next.customized-swiper-button-next',
+      prevEl: '.swiper-button-prev.customized-swiper-button-prev',
     },
     spaceBetween: 30,
   }
   return (
     <Layout>
       <SEO title="Home" keywords={['gatsby', 'javascript', 'react', 'web development', 'blog', 'graphql']} />
-      <div className="banner">
+      <div className="banner_wrap">
         <Swiper {...params}>
           <div>
             <a>

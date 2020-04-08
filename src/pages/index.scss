@@ -5,10 +5,7 @@
   width: 100%;
   margin: 0 auto;
 } 
-.container_content {
-  flex: 1;
-  margin-right: 20px;
-}
+
 .container_nav {
   width: 252px;
 }
@@ -19,55 +16,64 @@
     padding: 15px;
   }
 }
-/* .banner {
-  height: 300px;
-} */
-/* .post-list-main h2.title {
-  position: relative;
-  display: inline-block;
+/*
+ * 主内容区域
+ */
+ .container_content {
+  flex: 1;
+  margin-right: 20px;
+  
 }
-
-.post-list-main h2.title::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #fc2f70;
-  transform-origin: center;
-  transform: translate(-50%, 0) scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-.post-list-main h2.title:hover::before {
-  transform: translate(-50%, 0) scaleX(1);
-}
-.post-list-main h2.title {
-  position: relative;
-}
-
-.post-list-main h2.title::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #fc2f70;
-  transform-origin: center;
-  transform: translate(-50%, 0) scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-h2.heading:hover::before {
-  transform: translate(-50%, 0) scaleX(1);
-}
-@media only screen and (max-width: 850px) {
-  .sidebar{display: none;}
-  .index-main{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+/*
+ * banner区域
+ */
+.banner_wrap {
+  cursor: pointer;
+  .customized-swiper-pagination {
+    bottom: 30px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    &.swiper-pagination-bullets {
+      bottom: 30px;
+    }
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      background-color: #fff;
+      opacity: .48;
+      margin-right: 15px;
+      &.swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+    }
   }
-} */
+  .customized-swiper-button-next {
+    right: 160px;
+    background: url('../images/right.svg') no-repeat 50%/100% 100%;
+    width: 36px;
+    height: 36px;
+    display: none;
+    transition: .3s;
+    &.swiper-button-next:after {
+      content: none;
+    }
+  }
+  .customized-swiper-button-prev {
+    left: 160px;
+    background: url('../images/left.svg') no-repeat 50%/100% 100%;
+    width: 36px;
+    height: 36px;
+    display: none;
+    transition: .3s;
+    &.swiper-button-prev:after {
+      content: none;
+    }
+  }
+  &:hover {
+    .customized-swiper-button-prev, .customized-swiper-button-next {
+      display: block;
+    }
+  }
+}
